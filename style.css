@@ -1,0 +1,45 @@
+
+html {
+    scroll-behavior: smooth;
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+    display: none;
+}
+
+.hide-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+/* Accordion */
+.accordion-content {
+    transition: max-height 0.3s ease-in-out;
+    max-height: 0;
+    overflow: hidden;
+}
+
+.accordion-content.open {
+    max-height: 500px;
+}
+
+/* Drawer */
+.drawer-overlay {
+    transition: opacity 0.3s ease-in-out;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.drawer-overlay.open {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.drawer-panel {
+    transition: transform 0.3s ease-in-out;
+    transform: translateX(100%);
+}
+
+.drawer-panel.open {
+    transform: translateX(0);
+}
